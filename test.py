@@ -37,9 +37,9 @@ def show_image(url):
     result = classes[predicted_class.item()]
     
     # Visualize the input image (optional)
-    plt.imshow(img)
-    plt.title("Input Image")
-    plt.show()
+    # plt.imshow(img)
+    # plt.title("Input Image")
+    # plt.show()
     return f"Predicted class: {result}"
 
 

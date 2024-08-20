@@ -1,9 +1,9 @@
 # FAST API
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import matplotlib.pyplot as plt
 
+import logging
 from PIL import Image
 from test import show_image
 
@@ -19,6 +19,11 @@ def root():
     return {"hello" : "world"}
 
 @app.post("/predicted-image")
-def predict_image(url:str):
-    result = show_image(url)
-    return result
+def predict_image(image_url: ImageURL):
+    try:
+        url = image_url.url
+        result = show_image(url)
+        return result
+    except Exception as e:
+        logging.error(f"Error processing image: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
