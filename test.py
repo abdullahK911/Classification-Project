@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt # Import matplotlib
 from data import transforms
 import requests
 from io import BytesIO
+<<<<<<< HEAD
 from model import Model
 from utils import torch
 from inference import classes, model
@@ -13,6 +14,13 @@ from inference import classes, model
 model = Model()
 model.load_state_dict(torch.load(r"/home/abdullah/Desktop/celeb-classification/model.pth"))
 model.eval()
+=======
+
+from utils import torch
+from inference import classes, model
+
+
+>>>>>>> cd1e927ba8f4fc72f7d91b4e0998ff2d68d63ad2
 
 def show_image(url):
     response = requests.get(url)

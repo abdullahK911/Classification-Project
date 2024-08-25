@@ -19,9 +19,15 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
 ])
 
+<<<<<<< HEAD
 trainset = ImageData(dir=r"/home/abdullah/Desktop/celeb-classification/dataset/train", transform=transform)
 validset = ImageData(dir=r"/home/abdullah/Desktop/celeb-classification/dataset/validation", transform=transform)
 testset = ImageData(dir=r"/home/abdullah/Desktop/celeb-classification/dataset/test", transform=transform)
+=======
+trainset = ImageData(dir=r"C:\Users\D2\Desktop\celebrity-classification\dataset\train", transform=transform)
+validset = ImageData(dir=r"C:\Users\D2\Desktop\celebrity-classification\dataset\validation", transform=transform)
+testset = ImageData(dir=r"C:\Users\D2\Desktop\celebrity-classification\dataset\test", transform=transform)
+>>>>>>> cd1e927ba8f4fc72f7d91b4e0998ff2d68d63ad2
 
 trainloader = DataLoader(trainset, batch_size=8, shuffle=True)
 validloader = DataLoader(validset, batch_size=8, shuffle=False)

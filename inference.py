@@ -7,7 +7,11 @@ classes = ["anne-hathaway", "blake-lively", "brad-pitt", "christian-bale", "emil
 
 # loading model
 model = Model()
+<<<<<<< HEAD
 model.load_state_dict(torch.load(r"/home/abdullah/Desktop/celeb-classification/model.pth"))
+=======
+model.load_state_dict(torch.load(r"C:\Users\D2\Desktop\celebrity-classification\model.pth"))
+>>>>>>> cd1e927ba8f4fc72f7d91b4e0998ff2d68d63ad2
 model.eval()
 
 
